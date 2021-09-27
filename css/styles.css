@@ -36,7 +36,6 @@ img {
 
 .header-container {
   display: flex;
-
   border-bottom: 1px solid #ececec;
 }
 .nav-section {
@@ -66,30 +65,62 @@ img {
 
 /*------Позиционирование Студии----*/
 
-/*.hero-contaiber {
+.hero-container {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
-  margin: 0 auto;
-}*/
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
-/*.hero-title {
-  max-height: 700px;
+.hero-title {
+  width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-button {
+  width: 200px;
+  border: none;
+  border-radius: 4px;
   margin: 0 auto;
-}*/
+}
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 94px;
+}
 
 .feature-items {
   display: flex;
 }
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+.feature-item-title {
+  margin-bottom: 10px;
+}
+
 /*.feature-item {
   width: calc(100% / 4);
 }*/
+
+.occupation-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .occupation-title {
   text-align: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
 }
 
 .occupation-items {
   display: flex;
+  margin-bottom: 94px;
+}
+.occupation-li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-container {
@@ -141,6 +172,7 @@ img {
 .project-items {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 94px;
 }
 
 .project-item {
@@ -150,6 +182,10 @@ img {
 .project-item:nth-child(3n + 3) {
   margin-right: 0px;
 }
+.project-item:nth-child(n + 7) {
+  margin-bottom: 0px;
+}
+
 .project-title {
   /*text-align: start;*/
   margin: 30px 24px 4px 24px;
