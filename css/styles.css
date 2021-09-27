@@ -6,7 +6,7 @@
 
 .container {
   width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -28,8 +28,152 @@ ul {
 
 img {
   display: block;
+  /*margin: 0;
+  padding: 0;*/
 }
 
+/*------Позиционирование header----*/
+
+.header-container {
+  display: flex;
+
+  border-bottom: 1px solid #ececec;
+}
+.nav-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 93px;
+}
+.nav-section-items {
+  display: flex;
+  padding: 32px 0;
+}
+.nav-section-li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-items {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header-item-li:not(:last-child) {
+  margin-right: 50px;
+}
+
+/*------Позиционирование Студии----*/
+
+/*.hero-contaiber {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+}*/
+
+/*.hero-title {
+  max-height: 700px;
+  margin: 0 auto;
+}*/
+
+.feature-items {
+  display: flex;
+}
+/*.feature-item {
+  width: calc(100% / 4);
+}*/
+.occupation-title {
+  text-align: center;
+}
+
+.occupation-items {
+  display: flex;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+}
+.team-title {
+  text-align: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.team-items {
+  display: flex;
+  margin-bottom: 94px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-item-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team-text {
+  margin-bottom: 30px;
+}
+/*------Позиционирование Портфолио----*/
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button {
+  border: none;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.project-item:nth-child(3n + 3) {
+  margin-right: 0px;
+}
+.project-title {
+  /*text-align: start;*/
+  margin: 30px 24px 4px 24px;
+}
+.project-text {
+  margin: 0 24px 20px 24px;
+}
+/*------Позиционирование footer----*/
+
+.footer-container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex-direction: column;
+}
+
+.address-items {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.address-li-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 :root {
   --accent-color: #2196f3;
   --nav-text-color: #000000;
