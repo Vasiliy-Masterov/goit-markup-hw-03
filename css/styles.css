@@ -186,12 +186,18 @@ img {
   margin-bottom: 0px;
 }
 
+.project-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
 .project-title {
   /*text-align: start;*/
-  margin: 30px 24px 4px 24px;
+  margin: 0 24px 4px 24px;
 }
 .project-text {
-  margin: 0 24px 20px 24px;
+  margin: 0 24px 0 24px;
 }
 /*------Позиционирование footer----*/
 
