@@ -34,10 +34,14 @@ img {
 
 /*------Позиционирование header----*/
 
-.header-container {
-  display: flex;
+.header-block {
   border-bottom: 1px solid #ececec;
 }
+
+.header-container {
+  display: flex;
+}
+
 .nav-section {
   display: flex;
   align-items: center;
@@ -45,82 +49,109 @@ img {
 
 .logo {
   margin-right: 93px;
-}
-.nav-section-items {
-  display: flex;
-  padding: 32px 0;
-}
-.nav-section-li:not(:last-child) {
-  margin-right: 50px;
+  padding: 24px 0 25px 0;
 }
 
-.header-items {
+.nav-section-list {
+  display: flex;
+}
+
+.nav-section-item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-section-link {
+  display: block;
+  padding: 32px 0;
+}
+
+.header-list {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.header-item-li:not(:last-child) {
+
+.header-item:not(:last-child) {
   margin-right: 50px;
 }
 
+.header-link {
+  display: block;
+  padding: 32px 0;
+}
 /*------Позиционирование Студии----*/
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
+.hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .hero-title {
-  width: 700px;
-  margin: 0 auto 30px auto;
+  max-width: 700px;
+  margin-bottom: 30px;
 }
 
 .hero-button {
-  width: 200px;
+  padding: 10px 32px;
   border: none;
   border-radius: 4px;
-  margin: 0 auto;
 }
 
-.feature-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 94px;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.feature-items {
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.feature-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-.feature-item:not(:last-child) {
-  margin-right: 30px;
+.feature-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
+
 .feature-item-title {
   margin-bottom: 10px;
 }
 
-/*.feature-item {
-  width: calc(100% / 4);
-}*/
-
-.occupation-container {
-  display: flex;
-  flex-direction: column;
+.occupation-section {
+  padding-top: 0;
 }
 
 .occupation-title {
   text-align: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
-.occupation-items {
+.occupation-list {
   display: flex;
-  margin-bottom: 94px;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-.occupation-li:not(:last-child) {
-  margin-right: 30px;
+
+.occupation-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .team-container {
@@ -129,21 +160,29 @@ img {
 }
 .team-title {
   text-align: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
-.team-items {
+.team-list {
   display: flex;
-  margin-bottom: 94px;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.team-item-title {
+.team-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
   margin-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-img {
+  margin-bottom: 30px;
+}
+.team-item-title {
   margin-bottom: 10px;
 }
 
@@ -189,7 +228,7 @@ img {
 .project-content {
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--border-color);
   border-top: none;
 }
 .project-title {
@@ -200,12 +239,9 @@ img {
   margin: 0 24px 0 24px;
 }
 /*------Позиционирование footer----*/
-
-.footer-container {
-  display: flex;
+.footer-block {
   padding-top: 60px;
   padding-bottom: 60px;
-  flex-direction: column;
 }
 
 .address-items {
@@ -226,6 +262,7 @@ img {
   --bg-light-color: #f5f4fa;
   --bg-dark-color: #2f303a;
   --project-bg-color: #eeeeee;
+  --border-color: #ececec;
 }
 
 body {
@@ -260,25 +297,25 @@ body {
   color: var(--nav-text-color);
 }
 
-.nav-section-item,
-.header-item {
+.nav-section-link,
+.header-link {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--nav-text-color);
 }
 
-.nav-section-item:hover,
-.nav-section-item:focus,
-.header-item:hover,
-.header-item:focus,
+.nav-section-link:hover,
+.nav-section-link:focus,
+.header-link:hover,
+.header-link:focus,
 .address-item:hover,
 .address-item:focus,
 .current {
   color: var(--accent-color);
 }
 
-.header-item {
+.header-link {
   color: var(--text-gray-color);
 }
 
