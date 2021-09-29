@@ -28,8 +28,6 @@ ul {
 
 img {
   display: block;
-  /*margin: 0;
-  padding: 0;*/
 }
 
 /*------Позиционирование header----*/
@@ -74,30 +72,12 @@ img {
   margin-right: 50px;
 }
 
-.header-link {
-  display: block;
-  padding: 32px 0;
-}
 /*------Позиционирование Студии----*/
-.hero-section {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
+
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.hero-title {
-  max-width: 700px;
-  margin-bottom: 30px;
-}
-
-.hero-button {
-  padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
 }
 
 .section {
@@ -128,17 +108,8 @@ img {
   margin-top: 30px;
 }
 
-.feature-item-title {
-  margin-bottom: 10px;
-}
-
 .occupation-section {
   padding-top: 0;
-}
-
-.occupation-title {
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .occupation-list {
@@ -158,10 +129,6 @@ img {
   display: flex;
   flex-direction: column;
 }
-.team-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
 
 .team-list {
   display: flex;
@@ -170,25 +137,10 @@ img {
   margin-top: -30px;
 }
 
-.team-item {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-  padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
 .team-img {
   margin-bottom: 30px;
 }
-.team-item-title {
-  margin-bottom: 10px;
-}
 
-.team-text {
-  margin-bottom: 30px;
-}
 /*------Позиционирование Портфолио----*/
 
 .filter-list {
@@ -201,30 +153,12 @@ img {
   margin-right: 8px;
 }
 
-.filter-button {
-  border: none;
-  padding: 6px 22px;
-  border-radius: 4px;
-}
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-
-.project-item {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-}
-/*.project-item:nth-child(3n + 3) {
-  margin-right: 0px;
-}
-.project-item:nth-child(n + 7) {
-  margin-bottom: 0px;
-}*/
 
 .project-content {
   padding-top: 20px;
@@ -234,15 +168,9 @@ img {
   border: 1px solid var(--border-color);
   border-top: none;
 }
-.project-title {
-  margin-bottom: 4px;
-}
 
 /*------Позиционирование footer----*/
-.footer-block {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 .footer-block .logo {
   display: block;
   margin-bottom: 20px;
@@ -256,6 +184,7 @@ img {
 .address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
 :root {
   --accent-color: #2196f3;
   --nav-text-color: #000000;
@@ -320,12 +249,16 @@ body {
 }
 
 .header-link {
+  display: block;
+  padding: 32px 0;
   color: var(--text-gray-color);
 }
 
 /*-----------footer--------*/
 .footer-block {
   background-color: var(--bg-dark-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .address-link {
@@ -341,6 +274,8 @@ body {
 /*-------------main-Студия------------*/
 .hero-section {
   background-color: var(--bg-dark-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -351,6 +286,8 @@ body {
   text-align: center;
   color: var(--white-color);
   text-transform: uppercase;
+  max-width: 700px;
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -362,6 +299,9 @@ body {
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
 }
 
 /*-----------особенности--------------*/
@@ -372,6 +312,7 @@ body {
   line-height: 1.2;
   color: var(--title-dark-gray-color);
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .feature-text {
@@ -386,6 +327,8 @@ body {
   font-size: 36px;
   line-height: 1.2;
   color: var(--title-dark-gray-color);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /*--------------Наша команда-------------*/
@@ -399,10 +342,19 @@ body {
   font-size: 36px;
   line-height: 1.2;
   color: var(--thtitle-dark-grayird-color);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .team-item {
   background-color: var(--white-color);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item-title {
@@ -411,6 +363,7 @@ body {
   line-height: 1.2;
   color: var(--title-dark-gray-color);
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .team-text {
@@ -418,6 +371,7 @@ body {
   line-height: 1.2;
   color: var(--text-gray-color);
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /*------------Портфолио----------*/
@@ -434,6 +388,9 @@ body {
   color: var(--title-dark-gray-color);
   background-color: var(--bg-light-color);
   cursor: pointer;
+  border: none;
+  padding: 6px 22px;
+  border-radius: 4px;
 }
 
 .filter-button:hover,
@@ -449,6 +406,9 @@ body {
 
 .project-item {
   background-color: var(--project-bg-color);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .project-title {
@@ -457,6 +417,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-dark-gray-color);
+  margin-bottom: 4px;
 }
 
 .project-text {
